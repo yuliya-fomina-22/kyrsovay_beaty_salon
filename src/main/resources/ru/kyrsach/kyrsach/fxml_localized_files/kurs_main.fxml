@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.SepiaTone?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<TabPane prefHeight="611.0" prefWidth="919.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.kyrsach.kyrsach.controller.MainController">
+   <tabs>
+      <Tab fx:id="tabAppointment" closable="false" text="%text.главное">
+         <content>
+            <BorderPane prefHeight="700.0" prefWidth="1000.0">
+               <center>
+                  <SplitPane dividerPositions="0.5" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <items>
+                        <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Label text="%text.клиенты">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" top="10.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <HBox alignment="CENTER">
+                                 <children>
+                                    <TextField fx:id="tfFindClient" HBox.hgrow="ALWAYS">
+                                       <HBox.margin>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" />
+                                       </HBox.margin>
+                                    </TextField>
+                                    <Button fx:id="btfindClient" mnemonicParsing="false" onAction="#findClient" text="%text.найтиКлиента">
+                                       <HBox.margin>
+                                          <Insets bottom="5.0" right="5.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                              <TableView fx:id="tableViewClients" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                                <columns>
+                                  <TableColumn fx:id="tcClientLastName" prefWidth="75.0" reorderable="false" text="%text.фамилия" />
+                                  <TableColumn fx:id="tcClientFirstName" prefWidth="75.0" reorderable="false" text="%text.имя" />
+                                    <TableColumn fx:id="tcClientMiddleName" prefWidth="75.0" reorderable="false" text="%text.отчество" />
+                                    <TableColumn fx:id="tcClientPhoneNumber" prefWidth="75.0" reorderable="false" text="%text.номерТелефона" />
+                                </columns>
+                                 <columnResizePolicy>
+                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                 </columnResizePolicy>
+                              </TableView>
+                              <Label fx:id="lberrorClients" alignment="BOTTOM_CENTER">
+                                 <padding>
+                                    <Insets bottom="5.0" top="5.0" />
+                                 </padding></Label>
+                           </children>
+                        </VBox>
+                        <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Label text="%text.мастера">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" top="10.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <HBox alignment="CENTER">
+                                 <children>
+                                    <TextField fx:id="tfFindMaster" HBox.hgrow="ALWAYS">
+                                       <HBox.margin>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" />
+                                       </HBox.margin>
+                                    </TextField>
+                                    <Button fx:id="btfindMaster" mnemonicParsing="false" onAction="#findMaster" text="%text.найтиМастера">
+                                       <HBox.margin>
+                                          <Insets bottom="5.0" right="5.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                              <TableView fx:id="tableViewMasters" prefWidth="456.0" VBox.vgrow="SOMETIMES">
+                                <columns>
+                                  <TableColumn fx:id="tcMasterLastName" prefWidth="264.00004881620407" reorderable="false" text="%text.фамилия" />
+                                    <TableColumn fx:id="tcMasterFirstName" prefWidth="264.00004881620407" reorderable="false" text="%text.имя" />
+                                    <TableColumn fx:id="tcMasterMiddleName" prefWidth="264.00004881620407" reorderable="false" text="%text.отчество" />
+                                  <TableColumn fx:id="tcMasterSpecialization" prefWidth="132.800048828125" reorderable="false" text="%text.специализация" />
+                                    <TableColumn fx:id="tcMasterWorkSchedule" prefWidth="132.800048828125" reorderable="false" text="%text.расписание" />
+                                </columns>
+                                 <columnResizePolicy>
+                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                 </columnResizePolicy>
+                              </TableView>
+                              <Label fx:id="lberrorMasters">
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                                 <padding>
+                                    <Insets bottom="5.0" top="5.0" />
+                                 </padding></Label>
+                           </children>
+                        </VBox>
+                     </items>
+                  </SplitPane>
+               </center>
+               <bottom>
+                  <HBox alignment="CENTER" prefHeight="38.0" prefWidth="919.0" BorderPane.alignment="TOP_CENTER">
+                     <children>
+                        <Button fx:id="btContinueApointment" alignment="CENTER" mnemonicParsing="false" onAction="#continueAppointment" text="%text.продолжить">
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin></Button>
+                        <Button fx:id="btTimeTable" alignment="CENTER" mnemonicParsing="false" onAction="#seeTimeTable" text="%text.расписание" />
+                     </children>
+                  </HBox>
+               </bottom>
+            </BorderPane>
+         </content>
+      </Tab>
+      <Tab closable="false" text="%text.запись">
+         <content>
+            <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <HBox>
+                     <children>
+                        <TextField fx:id="tfFindApp" HBox.hgrow="ALWAYS">
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <Button fx:id="btFindApp" mnemonicParsing="false" onAction="#findApp" text="%text.найти">
+                           <HBox.margin>
+                              <Insets right="5.0" top="5.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <TableView fx:id="tvAppointment" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                    <columns>
+                      <TableColumn fx:id="tcAppClient" prefWidth="75.0" text="%text.клиент" />
+                      <TableColumn fx:id="tcAppMaster" prefWidth="75.0" text="%text.мастер" />
+                        <TableColumn fx:id="tcAppData" prefWidth="75.0" text="%text.дата" />
+                        <TableColumn fx:id="tcAppTime" prefWidth="75.0" text="%text.время" />
+                        <TableColumn fx:id="tcAppStatus" prefWidth="75.0" text="%text.статус" />
+                    </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+                  <Label fx:id="infoLabel" />
+                  <HBox alignment="CENTER">
+                     <children>
+                        <Button fx:id="btEndAppointment" mnemonicParsing="false" onAction="#endAppointment" text="%text.завершитьЗапись">
+                           <HBox.margin>
+                              <Insets bottom="5.0" right="5.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="btcancelAppointment" mnemonicParsing="false" onAction="#cancelAppointment" text="%text.отменитьЗапись">
+                           <HBox.margin>
+                              <Insets bottom="5.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </content>
+      </Tab>
+      <Tab fx:id="tabTimeTableMasters" closable="false" text="%text.расписаниеМастеров">
+         <content>
+            <VBox alignment="TOP_CENTER">
+               <children>
+                  <ComboBox fx:id="comboBoxMasters" prefWidth="150.0" promptText="%prompttext.выберитеМастера">
+                     <VBox.margin>
+                        <Insets bottom="5.0" top="5.0" />
+                     </VBox.margin>
+                  </ComboBox>
+                  <GridPane fx:id="gpTimeTable" accessibleRole="TABLE_VIEW" alignment="TOP_CENTER" gridLinesVisible="true" VBox.vgrow="ALWAYS">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints maxHeight="86.99999389648437" minHeight="10.0" prefHeight="41.40000686645507" valignment="CENTER" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="95.19999313354492" minHeight="10.0" prefHeight="55.99998779296876" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="86.60001220703126" minHeight="10.0" prefHeight="52.20000610351562" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="100.00001831054686" minHeight="10.0" prefHeight="55.999966430664074" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="96.80003967285154" minHeight="10.0" prefHeight="50.39998779296877" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="91.39999999999998" minHeight="10.0" prefHeight="52.79998779296875" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="81.60001220703123" minHeight="10.0" prefHeight="49.600012207031284" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="73.19998779296873" minHeight="10.0" prefHeight="52.800012207031216" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="60.19998779296873" minHeight="10.0" prefHeight="45.59998779296876" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="53.60001220703123" minHeight="10.0" prefHeight="53.60001220703123" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <effect>
+                        <SepiaTone level="0.85" />
+                     </effect>
+                     <children>
+                        <Label contentDisplay="CENTER" text="%text.время" />
+                        <Label alignment="TOP_CENTER" contentDisplay="RIGHT" text="%text.понедельник" textAlignment="CENTER" GridPane.columnIndex="1">
+                           <padding>
+                              <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                           </padding>
+                        </Label>
+                        <Label text="%text.вторник" GridPane.columnIndex="2" />
+                        <Label text="%text.среда" GridPane.columnIndex="3" />
+                        <Label text="%text.четверг" GridPane.columnIndex="4" />
+                        <Label text="%text.пятница" GridPane.columnIndex="5" />
+                        <Label text="%text.9001000" GridPane.rowIndex="1" />
+                        <Label text="%text.10001100" GridPane.rowIndex="2" />
+                        <Label text="%text.11001200" GridPane.rowIndex="3" />
+                        <Label text="%text.12001300" GridPane.rowIndex="4" />
+                        <Label text="%text.13001400" GridPane.rowIndex="5" />
+                        <Label text="%text.14001500" GridPane.rowIndex="6" />
+                        <Label text="%text.15001600" GridPane.rowIndex="7" />
+                        <Label text="%text.16001700" GridPane.rowIndex="8" />
+                        <Label text="%text.17001800" GridPane.rowIndex="9" />
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin>
+                  </GridPane>
+               </children>
+            </VBox>
+         </content>
+      </Tab>
+      <Tab fx:id="tabClients" closable="false" text="%text.клиенты">
+         <content>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <HBox alignment="CENTER">
+                     <children>
+                        <TextField fx:id="tfFindClient2" HBox.hgrow="ALWAYS">
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <Button fx:id="btfindClient2" mnemonicParsing="false" onAction="#findClientOnTab" text="%text.найтиКлиента">
+                           <HBox.margin>
+                              <Insets bottom="5.0" right="5.0" top="5.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <TableView fx:id="tvClients" prefHeight="546.0" prefWidth="919.0" VBox.vgrow="SOMETIMES">
+                    <columns>
+                      <TableColumn fx:id="tcClientsLastName" prefWidth="75.0" reorderable="false" text="%text.фамилия" />
+                      <TableColumn fx:id="tcClientsFirstName" prefWidth="75.0" reorderable="false" text="%text.имя" />
+                        <TableColumn fx:id="tcClientsMiddleName" prefWidth="75.0" reorderable="false" text="%text.отчество" />
+                        <TableColumn fx:id="tcClientsPhone" prefWidth="75.0" reorderable="false" text="%text.номерТелефона" />
+                        <TableColumn fx:id="tcClientsEmail" prefWidth="75.0" reorderable="false" text="%text.eMail" />
+                        <TableColumn fx:id="tcClientsBirthDate" prefWidth="75.0" reorderable="false" text="%text.датаРождения" />
+                        <TableColumn fx:id="tcClientsPref" prefWidth="75.0" reorderable="false" text="%text.предпочтения" />
+                    </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+                  <Label fx:id="labelnfo" />
+                  <Button fx:id="btAdd" contentDisplay="CENTER" mnemonicParsing="false" onAction="#addClient" text="%text.добавитьКлиента">
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+         </content>
+      </Tab>
+      <Tab fx:id="tabMaterials" closable="false" text="%text.материалы">
+         <content>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <TableView fx:id="tvMaterials" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="SOMETIMES">
+                     <columns>
+                        <TableColumn fx:id="tcMaterialName" prefWidth="75.0" text="%text.название" />
+                        <TableColumn fx:id="tcMaterialQuantity" prefWidth="75.0" text="%text.количество" />
+                     </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+               </children>
+            </VBox>
+         </content>
+      </Tab>
+      <Tab closable="false" text="%text.услуги">
+         <content>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <TableView fx:id="tvService" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                    <columns>
+                      <TableColumn fx:id="tcName" prefWidth="75.0" text="%text.название" />
+                      <TableColumn fx:id="tcPrice" prefWidth="75.0" text="%text.цена" />
+                    </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+               </children>
+            </VBox>
+         </content>
+      </Tab>
+   </tabs>
+</TabPane>

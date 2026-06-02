@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.kyrsach.kyrsach.controller.ClientController">
+   <children>
+      <Label alignment="CENTER" text="%label.add_client">
+         <padding>
+            <Insets bottom="10.0" top="10.0" />
+         </padding>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <VBox alignment="TOP_CENTER" maxHeight="500.0" maxWidth="500.0" prefHeight="447.0" prefWidth="436.0">
+         <children>
+            <Label maxHeight="-Infinity" maxWidth="-Infinity" text="%label.first_name" />
+            <TextField fx:id="tfFirstName" />
+            <Label text="%label.last_name" />
+            <TextField fx:id="tfLastName" />
+            <Label text="%label.middle_name" />
+            <TextField fx:id="tfMiddleName" />
+            <Label text="%label.phone" />
+            <TextField fx:id="tfPhoneNumber" />
+            <Label text="%label.birth_date" />
+            <TextField fx:id="tfDateBirthday" />
+            <Label text="%label.email" />
+            <TextField fx:id="tfEmail" />
+            <Label text="%label.preferences" />
+            <TextField fx:id="tfPref" />
+            <Button fx:id="btAddClient" mnemonicParsing="false" onAction="#addClient" text="%button.bt_add_client">
+               <VBox.margin>
+                  <Insets bottom="10.0" top="10.0" />
+               </VBox.margin>
+            </Button>
+            <Label fx:id="labelInfo" />
+         </children>
+      </VBox>
+   </children>
+</VBox>

@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ns0:VBox xmlns:ns0="http://javafx.com/javafx/25" xmlns:ns1="http://javafx.com/fxml/1" alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="435.0" prefWidth="367.0" ns1:controller="ru.kyrsach.kyrsach.controller.MasterScheduleController">
+   <ns0:children>
+      <ns0:DatePicker ns1:id="datePicker">
+         <ns0:VBox.margin>
+            <ns0:Insets top="5.0" />
+         </ns0:VBox.margin></ns0:DatePicker>
+      <ns0:Label ns1:id="lbDate" text="%label.lb_date">
+         <ns0:VBox.margin>
+            <ns0:Insets bottom="5.0" top="5.0" />
+         </ns0:VBox.margin>
+      </ns0:Label>
+      <ns0:GridPane ns1:id="scheduleGrid" alignment="CENTER" gridLinesVisible="true" prefHeight="435.0" prefWidth="367.0" VBox.vgrow="SOMETIMES">
+        <ns0:columnConstraints>
+          <ns0:ColumnConstraints hgrow="SOMETIMES" maxWidth="179.199951171875" minWidth="10.0" prefWidth="90.2" />
+          <ns0:ColumnConstraints hgrow="SOMETIMES" maxWidth="304.800048828125" minWidth="10.0" prefWidth="276.6" />
+        </ns0:columnConstraints>
+        <ns0:rowConstraints>
+          <ns0:RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <ns0:RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <ns0:RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <ns0:RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <ns0:RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <ns0:RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <ns0:RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <ns0:RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <ns0:RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </ns0:rowConstraints>
+         <ns0:children>
+            <ns0:Label />
+            <ns0:Label GridPane.rowIndex="1" />
+            <ns0:Label GridPane.rowIndex="2" />
+            <ns0:Label GridPane.rowIndex="3" />
+            <ns0:Label GridPane.rowIndex="4" />
+            <ns0:Label GridPane.rowIndex="5" />
+            <ns0:Label GridPane.rowIndex="6" />
+            <ns0:Label GridPane.rowIndex="7" />
+            <ns0:Label GridPane.rowIndex="8" />
+            <ns0:Label GridPane.columnIndex="1" />
+            <ns0:Label GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <ns0:Label GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <ns0:Label GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <ns0:Label GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <ns0:Label GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <ns0:Label GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <ns0:Label GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <ns0:Label GridPane.columnIndex="1" GridPane.rowIndex="8" />
+         </ns0:children>
+      </ns0:GridPane>
+   </ns0:children>
+   <ns0:padding>
+      <ns0:Insets bottom="5.0" />
+   </ns0:padding>
+</ns0:VBox>

@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ns0:VBox xmlns:ns0="http://javafx.com/javafx/25" xmlns:ns1="http://javafx.com/fxml/1" alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" ns1:controller="ru.kyrsach.kyrsach.controller.ClientController">
+   <ns0:children>
+      <ns0:Label alignment="CENTER" text="%label.add_client">
+         <ns0:padding>
+            <ns0:Insets bottom="10.0" top="10.0" />
+         </ns0:padding>
+         <ns0:font>
+            <ns0:Font size="14.0" />
+         </ns0:font>
+      </ns0:Label>
+      <ns0:VBox alignment="TOP_CENTER" maxHeight="500.0" maxWidth="500.0" prefHeight="447.0" prefWidth="436.0">
+         <ns0:children>
+            <ns0:Label maxHeight="-Infinity" maxWidth="-Infinity" text="%label.first_name" />
+            <ns0:TextField ns1:id="tfFirstName" />
+            <ns0:Label text="%label.last_name" />
+            <ns0:TextField ns1:id="tfLastName" />
+            <ns0:Label text="%label.middle_name" />
+            <ns0:TextField ns1:id="tfMiddleName" />
+            <ns0:Label text="%label.phone" />
+            <ns0:TextField ns1:id="tfPhoneNumber" />
+            <ns0:Label text="%label.birth_date" />
+            <ns0:TextField ns1:id="tfDateBirthday" />
+            <ns0:Label text="%label.email" />
+            <ns0:TextField ns1:id="tfEmail" />
+            <ns0:Label text="%label.preferences" />
+            <ns0:TextField ns1:id="tfPref" />
+            <ns0:Button ns1:id="btAddClient" mnemonicParsing="false" onAction="#addClient" text="%button.bt_add_client">
+               <ns0:VBox.margin>
+                  <ns0:Insets bottom="10.0" top="10.0" />
+               </ns0:VBox.margin>
+            </ns0:Button>
+            <ns0:Label ns1:id="labelInfo" />
+         </ns0:children>
+      </ns0:VBox>
+   </ns0:children>
+</ns0:VBox>

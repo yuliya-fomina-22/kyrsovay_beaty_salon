@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.SepiaTone?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<ns0:TabPane xmlns:ns0="http://javafx.com/javafx/25" xmlns:ns1="http://javafx.com/fxml/1" prefHeight="611.0" prefWidth="919.0" ns1:controller="ru.kyrsach.kyrsach.controller.MainController">
+   <ns0:tabs>
+      <ns0:Tab ns1:id="tabAppointment" closable="false" text="%tab.tab_appointment">
+         <ns0:content>
+            <ns0:BorderPane prefHeight="700.0" prefWidth="1000.0">
+               <ns0:center>
+                  <ns0:SplitPane dividerPositions="0.5" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <ns0:items>
+                        <ns0:VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0">
+                           <ns0:children>
+                              <ns0:Label text="%label.clients">
+                                 <ns0:VBox.margin>
+                                    <ns0:Insets bottom="10.0" top="10.0" />
+                                 </ns0:VBox.margin>
+                              </ns0:Label>
+                              <ns0:HBox alignment="CENTER">
+                                 <ns0:children>
+                                    <ns0:TextField ns1:id="tfFindClient" HBox.hgrow="ALWAYS">
+                                       <ns0:HBox.margin>
+                                          <ns0:Insets bottom="5.0" left="5.0" right="5.0" />
+                                       </ns0:HBox.margin>
+                                    </ns0:TextField>
+                                    <ns0:Button ns1:id="btfindClient" mnemonicParsing="false" onAction="#findClient" text="%button.btfind_client">
+                                       <ns0:HBox.margin>
+                                          <ns0:Insets bottom="5.0" right="5.0" />
+                                       </ns0:HBox.margin>
+                                    </ns0:Button>
+                                 </ns0:children>
+                              </ns0:HBox>
+                              <ns0:TableView ns1:id="tableViewClients" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                                <ns0:columns>
+                                  <ns0:TableColumn ns1:id="tcClientLastName" prefWidth="75.0" reorderable="false" text="%tablecolumn.tc_client_last_name" />
+                                  <ns0:TableColumn ns1:id="tcClientFirstName" prefWidth="75.0" reorderable="false" text="%tablecolumn.tc_client_first_name" />
+                                    <ns0:TableColumn ns1:id="tcClientMiddleName" prefWidth="75.0" reorderable="false" text="%tablecolumn.tc_client_middle_name" />
+                                    <ns0:TableColumn ns1:id="tcClientPhoneNumber" prefWidth="75.0" reorderable="false" text="%tablecolumn.tc_client_phone_number" />
+                                </ns0:columns>
+                                 <ns0:columnResizePolicy>
+                                    <ns0:TableView ns1:constant="CONSTRAINED_RESIZE_POLICY" />
+                                 </ns0:columnResizePolicy>
+                              </ns0:TableView>
+                              <ns0:Label ns1:id="lberrorClients" alignment="BOTTOM_CENTER">
+                                 <ns0:padding>
+                                    <ns0:Insets bottom="5.0" top="5.0" />
+                                 </ns0:padding></ns0:Label>
+                           </ns0:children>
+                        </ns0:VBox>
+                        <ns0:VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0">
+                           <ns0:children>
+                              <ns0:Label text="%label.masters">
+                                 <ns0:VBox.margin>
+                                    <ns0:Insets bottom="10.0" top="10.0" />
+                                 </ns0:VBox.margin>
+                              </ns0:Label>
+                              <ns0:HBox alignment="CENTER">
+                                 <ns0:children>
+                                    <ns0:TextField ns1:id="tfFindMaster" HBox.hgrow="ALWAYS">
+                                       <ns0:HBox.margin>
+                                          <ns0:Insets bottom="5.0" left="5.0" right="5.0" />
+                                       </ns0:HBox.margin>
+                                    </ns0:TextField>
+                                    <ns0:Button ns1:id="btfindMaster" mnemonicParsing="false" onAction="#findMaster" text="%button.btfind_master">
+                                       <ns0:HBox.margin>
+                                          <ns0:Insets bottom="5.0" right="5.0" />
+                                       </ns0:HBox.margin>
+                                    </ns0:Button>
+                                 </ns0:children>
+                              </ns0:HBox>
+                              <ns0:TableView ns1:id="tableViewMasters" prefWidth="456.0" VBox.vgrow="SOMETIMES">
+                                <ns0:columns>
+                                  <ns0:TableColumn ns1:id="tcMasterLastName" prefWidth="264.00004881620407" reorderable="false" text="%tablecolumn.tc_master_last_name" />
+                                    <ns0:TableColumn ns1:id="tcMasterFirstName" prefWidth="264.00004881620407" reorderable="false" text="%tablecolumn.tc_master_first_name" />
+                                    <ns0:TableColumn ns1:id="tcMasterMiddleName" prefWidth="264.00004881620407" reorderable="false" text="%tablecolumn.tc_master_middle_name" />
+                                  <ns0:TableColumn ns1:id="tcMasterSpecialization" prefWidth="132.800048828125" reorderable="false" text="%tablecolumn.tc_master_specialization" />
+                                    <ns0:TableColumn ns1:id="tcMasterWorkSchedule" prefWidth="132.800048828125" reorderable="false" text="%tablecolumn.tc_master_work_schedule" />
+                                </ns0:columns>
+                                 <ns0:columnResizePolicy>
+                                    <ns0:TableView ns1:constant="CONSTRAINED_RESIZE_POLICY" />
+                                 </ns0:columnResizePolicy>
+                              </ns0:TableView>
+                              <ns0:Label ns1:id="lberrorMasters">
+                                 <ns0:VBox.margin>
+                                    <ns0:Insets />
+                                 </ns0:VBox.margin>
+                                 <ns0:padding>
+                                    <ns0:Insets bottom="5.0" top="5.0" />
+                                 </ns0:padding></ns0:Label>
+                           </ns0:children>
+                        </ns0:VBox>
+                     </ns0:items>
+                  </ns0:SplitPane>
+               </ns0:center>
+               <ns0:bottom>
+                  <ns0:HBox alignment="CENTER" prefHeight="38.0" prefWidth="919.0" BorderPane.alignment="TOP_CENTER">
+                     <ns0:children>
+                        <ns0:Button ns1:id="btContinueApointment" alignment="CENTER" mnemonicParsing="false" onAction="#continueAppointment" text="%button.bt_continue_apointment">
+                           <ns0:HBox.margin>
+                              <ns0:Insets right="10.0" />
+                           </ns0:HBox.margin></ns0:Button>
+                        <ns0:Button ns1:id="btTimeTable" alignment="CENTER" mnemonicParsing="false" onAction="#seeTimeTable" text="%button.bt_time_table" />
+                     </ns0:children>
+                  </ns0:HBox>
+               </ns0:bottom>
+            </ns0:BorderPane>
+         </ns0:content>
+      </ns0:Tab>
+      <ns0:Tab closable="false" text="%tab.appointment">
+         <ns0:content>
+            <ns0:VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0">
+               <ns0:children>
+                  <ns0:HBox>
+                     <ns0:children>
+                        <ns0:TextField ns1:id="tfFindApp" HBox.hgrow="ALWAYS">
+                           <ns0:HBox.margin>
+                              <ns0:Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </ns0:HBox.margin>
+                        </ns0:TextField>
+                        <ns0:Button ns1:id="btFindApp" mnemonicParsing="false" onAction="#findApp" text="%button.bt_find_app">
+                           <ns0:HBox.margin>
+                              <ns0:Insets right="5.0" top="5.0" />
+                           </ns0:HBox.margin>
+                        </ns0:Button>
+                     </ns0:children>
+                  </ns0:HBox>
+                  <ns0:TableView ns1:id="tvAppointment" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                    <ns0:columns>
+                      <ns0:TableColumn ns1:id="tcAppClient" prefWidth="75.0" text="%tablecolumn.tc_app_client" />
+                      <ns0:TableColumn ns1:id="tcAppMaster" prefWidth="75.0" text="%tablecolumn.tc_app_master" />
+                        <ns0:TableColumn ns1:id="tcAppData" prefWidth="75.0" text="%tablecolumn.tc_app_data" />
+                        <ns0:TableColumn ns1:id="tcAppTime" prefWidth="75.0" text="%tablecolumn.tc_app_time" />
+                        <ns0:TableColumn ns1:id="tcAppStatus" prefWidth="75.0" text="%tablecolumn.tc_app_status" />
+                    </ns0:columns>
+                     <ns0:columnResizePolicy>
+                        <ns0:TableView ns1:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </ns0:columnResizePolicy>
+                  </ns0:TableView>
+                  <ns0:Label ns1:id="infoLabel" />
+                  <ns0:HBox alignment="CENTER">
+                     <ns0:children>
+                        <ns0:Button ns1:id="btEndAppointment" mnemonicParsing="false" onAction="#endAppointment" text="%button.bt_end_appointment">
+                           <ns0:HBox.margin>
+                              <ns0:Insets bottom="5.0" right="5.0" />
+                           </ns0:HBox.margin>
+                        </ns0:Button>
+                        <ns0:Button ns1:id="btcancelAppointment" mnemonicParsing="false" onAction="#cancelAppointment" text="%button.btcancel_appointment">
+                           <ns0:HBox.margin>
+                              <ns0:Insets bottom="5.0" />
+                           </ns0:HBox.margin>
+                        </ns0:Button>
+                     </ns0:children>
+                  </ns0:HBox>
+               </ns0:children>
+            </ns0:VBox>
+         </ns0:content>
+      </ns0:Tab>
+      <ns0:Tab ns1:id="tabTimeTableMasters" closable="false" text="%tab.tab_time_table_masters">
+         <ns0:content>
+            <ns0:VBox alignment="TOP_CENTER">
+               <ns0:children>
+                  <ns0:ComboBox ns1:id="comboBoxMasters" prefWidth="150.0" promptText="Выберите мастера">
+                     <ns0:VBox.margin>
+                        <ns0:Insets bottom="5.0" top="5.0" />
+                     </ns0:VBox.margin>
+                  </ns0:ComboBox>
+                  <ns0:GridPane ns1:id="gpTimeTable" accessibleRole="TABLE_VIEW" alignment="TOP_CENTER" gridLinesVisible="true" VBox.vgrow="ALWAYS">
+                    <ns0:columnConstraints>
+                        <ns0:ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ns0:ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ns0:ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ns0:ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ns0:ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ns0:ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </ns0:columnConstraints>
+                    <ns0:rowConstraints>
+                        <ns0:RowConstraints maxHeight="86.99999389648437" minHeight="10.0" prefHeight="41.40000686645507" valignment="CENTER" vgrow="SOMETIMES" />
+                        <ns0:RowConstraints maxHeight="95.19999313354492" minHeight="10.0" prefHeight="55.99998779296876" vgrow="SOMETIMES" />
+                        <ns0:RowConstraints maxHeight="86.60001220703126" minHeight="10.0" prefHeight="52.20000610351562" vgrow="SOMETIMES" />
+                        <ns0:RowConstraints maxHeight="100.00001831054686" minHeight="10.0" prefHeight="55.999966430664074" vgrow="SOMETIMES" />
+                        <ns0:RowConstraints maxHeight="96.80003967285154" minHeight="10.0" prefHeight="50.39998779296877" vgrow="SOMETIMES" />
+                        <ns0:RowConstraints maxHeight="91.39999999999998" minHeight="10.0" prefHeight="52.79998779296875" vgrow="SOMETIMES" />
+                        <ns0:RowConstraints maxHeight="81.60001220703123" minHeight="10.0" prefHeight="49.600012207031284" vgrow="SOMETIMES" />
+                        <ns0:RowConstraints maxHeight="73.19998779296873" minHeight="10.0" prefHeight="52.800012207031216" vgrow="SOMETIMES" />
+                      <ns0:RowConstraints maxHeight="60.19998779296873" minHeight="10.0" prefHeight="45.59998779296876" vgrow="SOMETIMES" />
+                      <ns0:RowConstraints maxHeight="53.60001220703123" minHeight="10.0" prefHeight="53.60001220703123" vgrow="SOMETIMES" />
+                    </ns0:rowConstraints>
+                     <ns0:effect>
+                        <ns0:SepiaTone level="0.85" />
+                     </ns0:effect>
+                     <ns0:children>
+                        <ns0:Label contentDisplay="CENTER" text="%label.time" />
+                        <ns0:Label alignment="TOP_CENTER" contentDisplay="RIGHT" text="%label.monday" textAlignment="CENTER" GridPane.columnIndex="1">
+                           <ns0:padding>
+                              <ns0:Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                           </ns0:padding>
+                        </ns0:Label>
+                        <ns0:Label text="%label.tuesday" GridPane.columnIndex="2" />
+                        <ns0:Label text="%label.wednesday" GridPane.columnIndex="3" />
+                        <ns0:Label text="%label.thursday" GridPane.columnIndex="4" />
+                        <ns0:Label text="%label.friday" GridPane.columnIndex="5" />
+                        <ns0:Label text="%label.9_00_10_00" GridPane.rowIndex="1" />
+                        <ns0:Label text="%label.10_00_11_00" GridPane.rowIndex="2" />
+                        <ns0:Label text="%label.11_00_12_00" GridPane.rowIndex="3" />
+                        <ns0:Label text="%label.12_00_13_00" GridPane.rowIndex="4" />
+                        <ns0:Label text="%label.13_00_14_00" GridPane.rowIndex="5" />
+                        <ns0:Label text="%label.14_00_15_00" GridPane.rowIndex="6" />
+                        <ns0:Label text="%label.15_00_16_00" GridPane.rowIndex="7" />
+                        <ns0:Label text="%label.16_00_17_00" GridPane.rowIndex="8" />
+                        <ns0:Label text="%label.17_00_18_00" GridPane.rowIndex="9" />
+                     </ns0:children>
+                     <ns0:VBox.margin>
+                        <ns0:Insets bottom="5.0" />
+                     </ns0:VBox.margin>
+                  </ns0:GridPane>
+               </ns0:children>
+            </ns0:VBox>
+         </ns0:content>
+      </ns0:Tab>
+      <ns0:Tab ns1:id="tabClients" closable="false" text="%tab.tab_clients">
+         <ns0:content>
+            <ns0:VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+               <ns0:children>
+                  <ns0:HBox alignment="CENTER">
+                     <ns0:children>
+                        <ns0:TextField ns1:id="tfFindClient2" HBox.hgrow="ALWAYS">
+                           <ns0:HBox.margin>
+                              <ns0:Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </ns0:HBox.margin>
+                        </ns0:TextField>
+                        <ns0:Button ns1:id="btfindClient2" mnemonicParsing="false" onAction="#findClientOnTab" text="%button.btfind_client2">
+                           <ns0:HBox.margin>
+                              <ns0:Insets bottom="5.0" right="5.0" top="5.0" />
+                           </ns0:HBox.margin>
+                        </ns0:Button>
+                     </ns0:children>
+                  </ns0:HBox>
+                  <ns0:TableView ns1:id="tvClients" prefHeight="546.0" prefWidth="919.0" VBox.vgrow="SOMETIMES">
+                    <ns0:columns>
+                      <ns0:TableColumn ns1:id="tcClientsLastName" prefWidth="75.0" reorderable="false" text="%tablecolumn.tc_clients_last_name" />
+                      <ns0:TableColumn ns1:id="tcClientsFirstName" prefWidth="75.0" reorderable="false" text="%tablecolumn.tc_clients_first_name" />
+                        <ns0:TableColumn ns1:id="tcClientsMiddleName" prefWidth="75.0" reorderable="false" text="%tablecolumn.tc_clients_middle_name" />
+                        <ns0:TableColumn ns1:id="tcClientsPhone" prefWidth="75.0" reorderable="false" text="%tablecolumn.tc_clients_phone" />
+                        <ns0:TableColumn ns1:id="tcClientsEmail" prefWidth="75.0" reorderable="false" text="%tablecolumn.tc_clients_email" />
+                        <ns0:TableColumn ns1:id="tcClientsBirthDate" prefWidth="75.0" reorderable="false" text="%tablecolumn.tc_clients_birth_date" />
+                        <ns0:TableColumn ns1:id="tcClientsPref" prefWidth="75.0" reorderable="false" text="%tablecolumn.tc_clients_pref" />
+                    </ns0:columns>
+                     <ns0:columnResizePolicy>
+                        <ns0:TableView ns1:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </ns0:columnResizePolicy>
+                  </ns0:TableView>
+                  <ns0:Label ns1:id="labelnfo" />
+                  <ns0:Button ns1:id="btAdd" contentDisplay="CENTER" mnemonicParsing="false" onAction="#addClient" text="%button.bt_add">
+                     <ns0:VBox.margin>
+                        <ns0:Insets bottom="10.0" />
+                     </ns0:VBox.margin>
+                  </ns0:Button>
+               </ns0:children>
+            </ns0:VBox>
+         </ns0:content>
+      </ns0:Tab>
+      <ns0:Tab ns1:id="tabMaterials" closable="false" text="%tab.tab_materials">
+         <ns0:content>
+            <ns0:VBox prefHeight="200.0" prefWidth="100.0">
+               <ns0:children>
+                  <ns0:TableView ns1:id="tvMaterials" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="SOMETIMES">
+                     <ns0:columns>
+                        <ns0:TableColumn ns1:id="tcMaterialName" prefWidth="75.0" text="%tablecolumn.tc_material_name" />
+                        <ns0:TableColumn ns1:id="tcMaterialQuantity" prefWidth="75.0" text="%tablecolumn.tc_material_quantity" />
+                     </ns0:columns>
+                     <ns0:columnResizePolicy>
+                        <ns0:TableView ns1:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </ns0:columnResizePolicy>
+                  </ns0:TableView>
+               </ns0:children>
+            </ns0:VBox>
+         </ns0:content>
+      </ns0:Tab>
+      <ns0:Tab closable="false" text="%tab.services">
+         <ns0:content>
+            <ns0:VBox prefHeight="200.0" prefWidth="100.0">
+               <ns0:children>
+                  <ns0:TableView ns1:id="tvService" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                    <ns0:columns>
+                      <ns0:TableColumn ns1:id="tcName" prefWidth="75.0" text="%tablecolumn.tc_name" />
+                      <ns0:TableColumn ns1:id="tcPrice" prefWidth="75.0" text="%tablecolumn.tc_price" />
+                    </ns0:columns>
+                     <ns0:columnResizePolicy>
+                        <ns0:TableView ns1:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </ns0:columnResizePolicy>
+                  </ns0:TableView>
+               </ns0:children>
+            </ns0:VBox>
+         </ns0:content>
+      </ns0:Tab>
+   </ns0:tabs>
+</ns0:TabPane>

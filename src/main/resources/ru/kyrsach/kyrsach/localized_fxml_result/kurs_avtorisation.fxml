@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ns0:VBox xmlns:ns0="http://javafx.com/javafx/25" xmlns:ns1="http://javafx.com/fxml/1" alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="173.0" prefWidth="368.0" ns1:controller="ru.kyrsach.kyrsach.controller.avtorisationController">
+   <ns0:children>
+      <ns0:Label text="%label.authorization">
+         <ns0:padding>
+            <ns0:Insets bottom="10.0" top="10.0" />
+         </ns0:padding>
+      </ns0:Label>
+      <ns0:Label text="%label.user" />
+      <ns0:TextField ns1:id="tfUser" maxWidth="300.0" prefHeight="26.0" prefWidth="449.0" />
+      <ns0:Label text="%label.password" />
+      <ns0:TextField ns1:id="tfPassword" maxWidth="300.0" />
+      <ns0:Button mnemonicParsing="false" onAction="#Avtorisation" text="%button.login">
+         <ns0:VBox.margin>
+            <ns0:Insets top="5.0" />
+         </ns0:VBox.margin>
+      </ns0:Button>
+   </ns0:children>
+</ns0:VBox>

@@ -1,0 +1,95 @@
+### kurs_add_client.fxml
+%label.add_client = Добавление клиента
+%label.first_name = Имя
+%label.last_name = Фамилия
+%label.middle_name = Отчество
+%label.phone = Телефон
+%label.birth_date = Дата рождения
+%label.email = E-mail
+%label.preferences = Предпочтения
+%button.bt_add_client = Добавить
+
+### kurs_appointment.fxml
+%label.appointment = Запись
+%label.first_name = Имя
+%label.last_name = Фамилия
+%label.middle_name = Отчество
+%label.phone = Телефон
+%label.email = E-mail
+%label.comment = Коментарий
+%label.master = Мастер
+%button.bt_appointment = Записать
+
+### kurs_avtorisation.fxml
+%label.authorization = Авторизация
+%label.user = Пользователь
+%label.password = Пароль
+%button.login = Авторизоваться
+
+### kurs_check.fxml
+%label.lb_client = Клиент: 
+%label.lb_master = Мастер: 
+%label.lb_price = Сумма: 
+%button.bt_end = Завершить
+
+### kurs_choosing_timetable.fxml
+%label.lb_date = Текущая дата:
+
+### kurs_main.fxml
+%tab.tab_appointment = Главное
+%label.clients = Клиенты
+%button.btfind_client = Найти клиента
+%tablecolumn.tc_client_last_name = Фамилия
+%tablecolumn.tc_client_first_name = Имя
+%tablecolumn.tc_client_middle_name = Отчество
+%tablecolumn.tc_client_phone_number = Номер телефона
+%label.masters = Мастера
+%button.btfind_master = Найти мастера
+%tablecolumn.tc_master_last_name = Фамилия
+%tablecolumn.tc_master_first_name = Имя
+%tablecolumn.tc_master_middle_name = Отчество
+%tablecolumn.tc_master_specialization = Специализация
+%tablecolumn.tc_master_work_schedule = Расписание
+%button.bt_continue_apointment = Продолжить 
+%button.bt_time_table = Расписание
+%tab.appointment = Запись
+%button.bt_find_app = Найти
+%tablecolumn.tc_app_client = Клиент
+%tablecolumn.tc_app_master = Мастер
+%tablecolumn.tc_app_data = Дата
+%tablecolumn.tc_app_time = Время
+%tablecolumn.tc_app_status = Статус
+%button.bt_end_appointment = Завершить запись
+%button.btcancel_appointment = Отменить запись
+%tab.tab_time_table_masters = Расписание мастеров
+%label.time = Время
+%label.monday = Понедельник
+%label.tuesday = Вторник
+%label.wednesday = Среда
+%label.thursday = Четверг
+%label.friday = Пятница
+%label.9_00_10_00 = 9.00 - 10.00
+%label.10_00_11_00 = 10.00 - 11.00
+%label.11_00_12_00 = 11.00 - 12.00
+%label.12_00_13_00 = 12.00 - 13.00
+%label.13_00_14_00 = 13.00 - 14.00
+%label.14_00_15_00 = 14.00 - 15.00
+%label.15_00_16_00 = 15.00 - 16.00
+%label.16_00_17_00 = 16.00 - 17.00
+%label.17_00_18_00 = 17.00 - 18.00
+%tab.tab_clients = Клиенты
+%button.btfind_client2 = Найти клиента
+%tablecolumn.tc_clients_last_name = Фамилия
+%tablecolumn.tc_clients_first_name = Имя
+%tablecolumn.tc_clients_middle_name = Отчество
+%tablecolumn.tc_clients_phone = Номер телефона
+%tablecolumn.tc_clients_email = E-mail
+%tablecolumn.tc_clients_birth_date = Дата рождения
+%tablecolumn.tc_clients_pref = Предпочтения
+%button.bt_add = Добавить клиента
+%tab.tab_materials = Материалы
+%tablecolumn.tc_material_name = Название 
+%tablecolumn.tc_material_quantity = Количество
+%tab.services = Услуги
+%tablecolumn.tc_name = Название
+%tablecolumn.tc_price = Цена
