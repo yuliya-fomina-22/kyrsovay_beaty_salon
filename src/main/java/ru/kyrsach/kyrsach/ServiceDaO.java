@@ -6,7 +6,6 @@ import org.slf4j.LoggerFactory;
 import ru.kyrsach.kyrsach.dao.Master;
 import ru.kyrsach.kyrsach.dao.Service;
 import ru.kyrsach.kyrsach.dao.impl.ServiceDaOImpl;
-import ru.kyrsach.kyrsach.util.DBConnection;
 import ru.kyrsach.kyrsach.util.DBHelper;
 import ru.kyrsach.kyrsach.util.SQLQueryLoader;
 

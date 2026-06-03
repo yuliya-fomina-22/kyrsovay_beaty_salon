@@ -4,7 +4,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import ru.kyrsach.kyrsach.dao.Material;
 import ru.kyrsach.kyrsach.dao.impl.MaterialDaOImpl;
-import ru.kyrsach.kyrsach.util.DBConnection;
 import ru.kyrsach.kyrsach.util.DBHelper;
 import ru.kyrsach.kyrsach.util.SQLQueryLoader;
 

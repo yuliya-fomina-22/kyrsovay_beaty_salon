@@ -280,12 +280,17 @@
                                 <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
                             </columnResizePolicy>
                         </TableView>
-                        <Label fx:id="labelnfo" />
-                        <Button fx:id="btAdd" contentDisplay="CENTER" mnemonicParsing="false" onAction="#addClient" text="%button.bt_add">
-                            <VBox.margin>
-                                <Insets bottom="10.0" />
-                            </VBox.margin>
-                        </Button>
+                        <Label fx:id="labelnfo" VBox.vgrow="NEVER" />
+                  <HBox alignment="CENTER" maxHeight="100.0" maxWidth="250.0" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                     <children>
+                              <Button fx:id="btAdd" contentDisplay="CENTER" mnemonicParsing="false" onAction="#addClient" text="%button.bt_add">
+                           <HBox.margin>
+                              <Insets right="5.0" />
+                           </HBox.margin>
+                              </Button>
+                        <Button mnemonicParsing="false" onAction="#deleteClient" text="%button.bt_delete" />
+                     </children>
+                  </HBox>
                     </children>
                 </VBox>
             </content>

@@ -21,10 +21,7 @@ import java.net.URL;
 import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.time.LocalTime;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Locale;
-import java.util.ResourceBundle;
+import java.util.*;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -206,7 +203,7 @@ public class MainController {
     private TextField tfFindApp;
 
     @FXML
-    private Label labelnfo;
+    protected Label labelnfo;
 
     private Locale currentLocale;
     private ResourceBundle bundle;
@@ -252,15 +249,11 @@ public class MainController {
         switch (selected) {
             case "Русский" ->
                     LanguageManager.setLocale(new Locale("ru", "RU"));
-
             case "Deutsch" ->
                     LanguageManager.setLocale(new Locale("de", "DE"));
-
             case "English" ->
                     LanguageManager.setLocale(new Locale("en", "US"));
         }
-
-
         try {
             MainApplication.reload(LanguageManager.getLocale());
         } catch (IOException e) {
@@ -457,9 +450,25 @@ public class MainController {
         tvAppointment.setItems(FXCollections.observableArrayList(filtered));
     }
 
+    @FXML
+    void deleteClient() {
+        Client selectedClient = tvClients.getSelectionModel().getSelectedItem();
 
-
-
+        if (selectedClient == null) {
+            labelnfo.setText("Пожалуйста, выберите клиента!");
+            return;
+        }
+        try {
+            clientDaO.delete(selectedClient);
+            tvClients.getItems().remove(selectedClient);
+            labelnfo.setText("Клиент удален");
+            ObservableList<Client> clientList = FXCollections.observableArrayList(clientDaO.findAll());
+            tvClients.setItems(clientList);
+        } catch (Exception e) {
+            labelnfo.setText("Ошибка удаления клиента");
+            logger.error("Ошибка удаления клиента");
+        }
+    }
 
 
     private void loadMasters() {

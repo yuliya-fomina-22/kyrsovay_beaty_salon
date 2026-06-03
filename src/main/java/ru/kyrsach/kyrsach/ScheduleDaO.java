@@ -4,7 +4,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import ru.kyrsach.kyrsach.dao.Schedule;
 import ru.kyrsach.kyrsach.dao.impl.ScheduleDAOImpl;
-import ru.kyrsach.kyrsach.util.DBConnection;
 import ru.kyrsach.kyrsach.util.DBHelper;
 import ru.kyrsach.kyrsach.util.SQLQueryLoader;
 
@@ -46,7 +45,6 @@ public class ScheduleDaO implements ScheduleDAOImpl {
         String sql = SQLQueryLoader.getQuery("sql.schedule_getMasterDaySchedule");
         logger.debug("Выполнение запроса: {}", sql);
         int dayOfWeek = date.getDayOfWeek().getValue();
-        System.out.println(dayOfWeek);
 
         try (PreparedStatement statement = DBHelper.getConnection().prepareStatement(sql)) {
             statement.setDate(1, Date.valueOf(date));
