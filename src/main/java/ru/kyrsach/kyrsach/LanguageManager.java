@@ -5,7 +5,7 @@ import java.util.ResourceBundle;
 
 public class LanguageManager {
     private static ResourceBundle bundle;
-    private static Locale currentLocale = new Locale("en", "EN");
+    private static Locale currentLocale = new Locale("ru", "RU");
 
     public static Locale getLocale() {
         return currentLocale;

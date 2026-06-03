@@ -46,7 +46,7 @@ public class MainApplication extends Application {
                             logger.info("Успешное подключение для {}", username);
                             break;
                         } catch (SQLException ex) {
-                            logger.error("Ошибка подключения для {}: {}", username, ex.getMessage());
+                            logger.error("Ошибка подключения для {}:", username);
                 Alert alert = new Alert(Alert.AlertType.ERROR);
                 alert.setTitle("Ошибка подключения");
                 alert.setHeaderText("Не удалось подключиться к базе данных");

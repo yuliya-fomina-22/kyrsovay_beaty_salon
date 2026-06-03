@@ -16,7 +16,12 @@ import java.util.List;
 
 public class ClientDaO implements ClientDaOImpl {
     private static final Logger logger = LoggerFactory.getLogger(ClientDaO.class);
-
+    /**
+     * Метод получения списка всех клиентов.
+     * Данный метод делает запрос в Базу Данных и получает список всех клиентов.
+     *  * @return Список Client
+     *  * @throws SQLException если произошла ошибка в Базе Данных
+     */
     @Override
     public List<Client> findAll() {
         String sql = SQLQueryLoader.getQuery("sql.FIND_ALL_client");
@@ -32,6 +37,7 @@ public class ClientDaO implements ClientDaOImpl {
         }
         return list;
     }
+
 
     @Override
     public Client update(Client client) {
@@ -54,7 +60,12 @@ public class ClientDaO implements ClientDaOImpl {
         }
         return client;
     }
-
+    /**
+     *  Добавляет нового клиента в базу данных.
+     *  @param client объект клиента для добавления
+     *  @return экземпляр созданного клиента
+     *  @throws SQLException если произошла ошибка в Базе Данных
+     */
     @Override
     public Client insert(Client client) {
         String sql = SQLQueryLoader.getQuery("sql.INSERT_client");
